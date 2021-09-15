@@ -6,6 +6,12 @@ $$
 
 
 
+#### Geonho Roh 
+
+
+
+
+
 * Prove by contradiction that there are infinitely many primes.
 
 
@@ -147,8 +153,95 @@ $$
     \newline \text {Therefore by the induction Amended }P(k) \text{ is true for all positive integer n}
     $$
     
-    $$
-    
-    $$
-    
+
+
+
+* $$
+  \newline \text{The Fibonacci numbers are given by the recursive formula}
+  \newline a_0=1 \text{, } a_1=1 \text{ and }a_{n+1} = a_n+a_{n-1} \text{ for } n\geq 1\\
+  \text{Prove that for all } n\geq1\\
+  a_n<(\frac{1+\sqrt{5}}{2})^n
+  $$
+
+  $$
+  \text{In this case we are going to use strong induction}\\
+  \\
+  \text{Step. 1}\\
+  \text{Showing the base case is true} \\
+  n=1\\
+  a_1 = 1 \text{ and }(\frac{1+\sqrt{5}}{2})^1 = \frac{1+\sqrt{5}}{2}\\
+  \text{Since }\frac{1+\sqrt{5}}{2} \text{ is approximately }	1.618 \\
+  \text{Therefore the base case }a_1 <  (\frac{1+\sqrt{5}}{2})^1 \text{ is true}
+  \\ \\
+  \text{Step. 2}\\
+  P(n) \text{ stands for }a_n<(\frac{1+\sqrt{5}}{2})^n \\
+  \text{Assume that the } P(1),P(2), \dots P(k) \text{ is true and prove } P(k+1) \text{ is also true} \\
+  \text{We are assuming } a_{1} < (\frac{1+\sqrt{5}}{2})^{1} \dots a_{k} < (\frac{1+\sqrt{5}}{2})^{k} \text{ are true}\\ \\
+  \text{ So }P(k+1) \text{ is }\\
+  a_{k+1} < (\frac{1+\sqrt{5}}{2})^{k+1} \\
+  a_{k+1}=a_k + a_{k-1}  \quad (a_{k+1} = a_k + a_{k-1})\\
+  (\frac{1+\sqrt{5}}{2})^{k+1}=(\frac{1+\sqrt{5}}{2})^{k}\times (\frac{1+\sqrt{5}}{2})\\
+  \\P(k+1)\rightarrow a_k + a_{k-1} <(\frac{1+\sqrt{5}}{2})^{k}\times (\frac{1+\sqrt{5}}{2})\\
+  \\
+  \text{By the assumption}\\
+  a_k <(\frac{1+\sqrt{5}}{2})^{k} \text{ and } a_{k-1}<(\frac{1+\sqrt{5}}{2})^{k-1}\\
+  \text{Therefore } a_k+a_{k-1}< (\frac{1+\sqrt{5}}{2})^{k} + (\frac{1+\sqrt{5}}{2})^{k-1} \\
+  \text{If the inequality }(\frac{1+\sqrt{5}}{2})^{k} + (\frac{1+\sqrt{5}}{2})^{k-1} \leq (\frac{1+\sqrt{5}}{2})^{k}\times (\frac{1+\sqrt{5}}{2}) \text{ is true}\\
+  a_k + a_{k-1} <(\frac{1+\sqrt{5}}{2})^{k}\times (\frac{1+\sqrt{5}}{2}) \text{ is true}\\
+  $$
+
+  $$
+  (\frac{1+\sqrt{5}}{2})^{k} + (\frac{1+\sqrt{5}}{2})^{k-1} \leq (\frac{1+\sqrt{5}}{2})^{k}\times (\frac{1+\sqrt{5}}{2}) \text{ divide the both side by }(\frac{1+\sqrt{5}}{2})^{k} \\
+  1+(\frac{1+\sqrt{5}}{2})^{-1} \leq (\frac{1+\sqrt{5}}{2})\\
+  1+(\frac{2}{1+\sqrt{5}})=(\frac{3+\sqrt{5}}{1+\sqrt{5}})\leq(\frac{1+\sqrt{5}}{2})\\
+  (\frac{3+\sqrt{5}}{1+\sqrt{5}})\leq(\frac{1+\sqrt{5}}{2})\\
+  (\frac{6+2\sqrt{5}}{2+2\sqrt{5}})\leq(\frac{(1+\sqrt{5})^2}{2+2\sqrt{5}})\\
+  6+2\sqrt{5}<(1+\sqrt{5})^2\leq 1+2\sqrt{5}+5\\
+  \text{Sicne the both sides are equal the inequality equation is true} 
+  \\ a_{k+1} < (\frac{1+\sqrt{5}}{2})^{k+1} \text{ is true}
+  \\
+  \\
+  \text{Thus for all } n\geq1\\
+  a_n<(\frac{1+\sqrt{5}}{2})^n
+  $$
+
+
+
+* $$
+  \text{(A curios vector space) Let }V = (0,\infin) \text{ be the set of positive real numbers. Define "addition ◈" on }V 
+  \\\text{as follows: }x◈y=x\times y \\
+  \text{where }\times \text{ is the usual multiplication of real numbers.}\\
+  \\
+  \text{Define "Scalar multiplication ◉" as }c◉x=x^c \text{ where }x\in V \text{ and } c \in R\\
+  \\
+  \text{Prove that }V \text{ is a real vector space with respect to addition and scalar multiplication defined above}
+  $$
+
+  
+
+$$
+\text{To prove that the }V \text{ is a vector space we have to prove that }V 
+\\ \text{satisfy 8 axioms }
+\\
+\\ \text{1) } x◈(y◈z) = (x◈y)◈z
+\\ x◈(y◈z) =xyz = (x◈y)◈z = xyz
+
+\\
+\\ \text{2) } x◈y = y◈x
+\\ x◈y =xy = y◈x = yz
+\\
+\\ \text{3) } x◈\vec0 = \vec0◈x =x 
+\\ 1\times x = x \times1 = x
+\\\\ \text{4) Existence of negative vector } x◈y=\vec0 
+\\ y = \frac{1}{x} ,\ y◈x = 1 
+\\\\ \text{5) } (a◉b)◉x=a◉(b◉x)
+\\(x^b)^a = (x^b)^a
+\\\\ \text{6) }(a+b)◉x=a◉x◈b◉x
+\\ x^{a+b} = x^a\times x^b= x^{a+b}
+\\\\ \text{7) }a◉(x◈y)=a◉x◈a◉y
+\\ (xy)^a = x^a \times y^a = (xy)^a = x^a
+\\\\ \text{8) }1◉x = x
+\\ x^1 = x
+\\ \text{Since all of the 8 axioms are satisfied, vector addition and scalar multiplication is defined above }V \text{ is a real vector space}
+$$
 
