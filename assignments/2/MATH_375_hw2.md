@@ -11,7 +11,7 @@ $$
 $$
 
 $$
- \text{ All vector space must satistfy the axiom 1}
+\text{ All vector space must satistfy the axiom 1}
 \\ \text{ Let } a,b\in V
 \\ a = (1,0,1) \ \ b=(0,1,1)
 \\ \text{if }V \text{ is an vector space } a+b\in V 
@@ -107,6 +107,7 @@ $$
   \\ \text{Therefore, }S \subseteq L(S)
   $$
   
+  ---------------------------
   $$
   \text{b) }\ S \subseteq T \subseteq V \ \ \text{ and if T is a subspace of V } \ L(S) \subseteq T  \ \\ \text{In other words:  L(S) is the smallest subspace of V which contains S.}
   \\
@@ -116,6 +117,8 @@ $$
   \\ \text{Therefore, every vector in L(s) is included in T which means L(s) is the smallest subspace of V which contains S}
   $$
   
+
+---------------------------
 
 $$
 \text{c) A subset S of V is a subspace of V if and only if L(S) = S.}
@@ -130,6 +133,8 @@ $$
 \\ \text{Therefore for a subset S of V to be a subspace }
 \\ \text{That means }S=L(S)
 $$
+---------------------------
+
 
 $$
 \text{d) If } \ S \subseteq T \subseteq V, \text{ then } L(S) \subseteq L(T)
@@ -141,14 +146,122 @@ $$
 \\ \text{Therefore } L(S) \subseteq L(T)
 $$
 
+---------------------------
 $$
 \text{e) If S and T are subspaces of V, then so is }S \cap T
 \\
+\\ \text{Let } A = S \cap T
 \\ \text{Both S and T are subspaces}
 \\ \text{Therefore both S and T has }\vec0 
+\\ \text{Both S and T have zero vector then }A \text{ has a zero vector too}
 \\
 \\ \text{Since S and T are subspaces } \ S \cap T \text{ must be a subset of V}
-\\ \text{Let } A = S \cap T
+
 \\ \text{To prove A is a subspace we need to show it satisfy closure axioms}
+\\
+
+\\ \text{Let B and C a vector in A }
+\\ \text{Both S and T has B and C too}
+\\ \text{Since S and T are subspaces They are closed under addition } 
+\\ \text{Therefore }B+C \ \text{ is in S and T, also for A}
+\\ \text{Axiom 1 satisfied}
+\\
+\\ \text{Let B a vector space in A and let c a real number}
+\\ \text{Since S and T are closed under scalar multiplication  cB is in S and T, also for A}
+\\ \text{Axiom 2 satified}
+\\
+\\ \text{Since A is satisfying closure axioms it is a subspace}
+$$
+
+---------------------------
+$$
+\text{f) If S and T are subsets of V, then } \ L(S \cap T) \subseteq L(S) \cap L(T)
+\\
+\\ \text{Let } A = S \cap T
+\\  L(S \cap T) = L(A)
+\\ \text{Since }A \subseteq S \text{ and }\ A\subseteq T
+\\ \text{As we showed in previous problem (d)}
+\\ L(A) \subseteq L(S) \text{ and } L(A) \subseteq L(T)
+\\ \text{It means }L(A) \subseteq L(S) \cap L(T)
+\\  \text{Therefore, } \ L(S \cap T) \subseteq L(S) \cap L(T)
+$$
+
+---------------------------
+$$
+\text{g) Give an example in which } L(S \cap T) \neq L(S) \cap L(T).
+\\
+\\ \text{When S=\{x\} and T = \{2x\}  }
+$$
+
+
+* **1.10 Problem#24** . *Let V be a finite-dimensional linear space, and let S be a subspace of V. Prove each of the following statements.*
+
+$$
+\text{a) S is finite dimensional and } dim(S) \leq dim(V)
+\\
+\\ \text{Let }(a_1,\dots a_n) \text{ be the basis of S}
+\\ \text{and the dimension of S is } n
+\\ \text{Since the S is subspace of V }(a_1,\dots a_n) \text{ is an independent set in V and also S is included in V}
+\\ \text{The basis of V can be written } (a_1,\dots a_n,b_1 \dots b_k)
+\\ dim(V) = n+k
+\\ \text{k must be } 0 \leq k
+\\ \text{Therefore }\ dim(S) \leq dim(V)
+$$
+---------------------------
+
+$$
+\text{b) dim S = dim V if and only if S = V}
+\\
+\\ \text{If }S \neq V 
+\\ \text{there is a vector space }C 
+\\ \text{That follows } S+C =V \text{ and } S \cap C \neq \vec0
+\\ \text{Sicne } V = S+C 
+\\ dim(S+C) = dim(S)
+\\ S \cap C = \empty \text{ therefore }dim(S+C) = dim(S)+dim(C)
+\\ dim(S)+dim(C) = dim(S)
+\\dim(C)=0
+\\
+\\ \text{It means }C=\{0\} \text{ <Contradiction>}
+\\ \text{Therefore, } S=V 
+$$
+---------------------------
+
+$$
+\text{c) Every basis for S is part of a basis for V}
+\\
+\\ \text{First we will show any set of independent elements in V is a subset of basis of V}
+\\ \text{Let }A=\{x_1, \dots x_k\} \text{ be any independent set of elements in B}
+\\ \text{If }L(A) \text{ is a basis of }B \text{ then A is a basis }
+\\ \text{ In case it isn't we add some element y: } y \in B \ y \notin L(A) \text{ to A}
+\\ A' =\{x_1, \dots x_k, y\}
+\\ \text{If }A' \text{ is dependent there would be some scalars }(c_1, \dots c_{k+1})
+\\  (\sum_{i=1}^{k} c_ix_i) + c_{k+1}y = 0  \text{ However } c_{k+1} \text{ cannot be 0} 
+\\ \text{Because }\ \{x_1, \dots x_k\} \text{ is independent}
+\\ \text{Also that means that }y \text{ can be spanned by }A \text{ and it is contradiction }
+\\ \text{Therefore, set }A' \text{ is independent with }k+1 \text{ element}
+\\ \text{If }L(A') =V \text{ that's it }
+\\ \text{If it doesn't we can repeat the process with }k+2 \text{ elements}
+\\ \text{Since it is finite-dimensional vector space we can get basis with finite steps}
+\\
+\\ \text{Now back to "Every basis for S is part of a basis for V"}
+\\ \text{basis must be independent}
+\\ \text{every element of S is also an element of V since S is subset of V}
+\\
+\\ \text{Therefore every basis of S is set of independent elements in V}
+\\ \text{As we proved any set of independent elements in V is a subset of basis of V}
+\\ \text{Thus, Every basis for S is part of a basis for V}
+$$
+---------------------------
+
+$$
+\text{d) A basis for V need not contain a basis for S}
+\\
+\\ \text{Let }V = \mathbb{R}^2
+\\ \text{And let }S=>y=x 
+\\
+\\ \text{There can be a basis of }V \text{ which is }\{(1,0),(0,1)\}
+\\ \text{Subsets of this basis can't be the basis for S}
+\\
+\\ \text{basis of S can be something like (1,1) and it is not contained}
 $$
 
